@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.42);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 98%;
+    height: 85rem;
+    margin-top: 2rem;
+}
+
+#form, #close {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    padding: 2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+#close {
+    display: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 2rem auto;
+}
