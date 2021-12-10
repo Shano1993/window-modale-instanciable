@@ -11,7 +11,9 @@ function open() {
         div.style.height = '40rem';
         div.style.marginTop = '10rem';
         div.style.backgroundColor = 'white';
-        div.style.boxShadow = "5px 10px 10px 5px #000000";
+        div.style.boxShadow = "0 0 10px 5px white";
+        div.style.border = "1rem solid black";
+        div.style.fontSize = "2rem";
         div.innerHTML = 'Ceci est une fenêtre modale instanciable !'
         form.style.display = 'none';
         closed.style.display = 'block';
