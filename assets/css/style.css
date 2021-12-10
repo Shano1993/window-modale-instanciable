@@ -16,31 +16,52 @@ body {
     flex-wrap: wrap;
 }
 
+h1 {
+    width: 100%;
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    text-decoration-line: underline;
+}
+
 #container {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 98%;
-    height: 85rem;
+    height: 93rem;
     margin-top: 2rem;
+    position: absolute;
 }
 
-#form, #close {
-    margin-top: 5rem;
+#form {
+    margin-top: 30rem;
     margin-bottom: 5rem;
     padding: 2rem;
     border-radius: 2rem;
     cursor: pointer;
 }
 
-#close {
-    display: none;
-    padding: 1rem;
-    border-radius: 1rem;
-    margin: 2rem auto;
-}
-
 div {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
+.para {
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+input {
+    width: 15rem;
+    margin: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+input:hover {
+    background-color: whitesmoke;
 }

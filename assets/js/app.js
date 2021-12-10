@@ -1,7 +1,11 @@
 let form = document.getElementById('form');
-let closed = document.getElementById('close');
 let container = document.getElementById('container');
 let div = document.createElement('div');
+const RIGHT_BUTTON = 2;
+
+document.addEventListener("contextmenu", function (event){
+    event.preventDefault();
+});
 
 function open() {
     form.addEventListener("click", () => {
@@ -14,19 +18,37 @@ function open() {
         div.style.boxShadow = "0 0 10px 5px white";
         div.style.border = "1rem solid black";
         div.style.fontSize = "2rem";
-        div.innerHTML = 'Ceci est une fenêtre modale instanciable !'
+        div.innerHTML = 'Veuillez entrer toutes les informations';
+        divElement();
         form.style.display = 'none';
-        closed.style.display = 'block';
     })
 }
 
 open();
 
-function close() {
-    closed.style.display = 'none';
-    form.style.display = 'block';
-    container.style.backgroundColor = '';
-    div.remove();
+function divElement() {
+    let input1 = document.createElement('input');
+    let input2 = document.createElement('input');
+    let input3 = document.createElement('input');
+    let input4 = document.createElement('input');
+    let input5 = document.createElement('input');
+    div.appendChild(input1);
+    div.appendChild(input2);
+    div.appendChild(input3);
+    div.appendChild(input4);
+    div.appendChild(input5);
+    input1.placeholder = "Votre nom";
+    input2.placeholder = "Votre prénom";
+    input3.placeholder = "Votre E-mail";
+    input4.placeholder = "Votre mot de passe";
+    input4.type = "password";
+    input5.placeholder = "Confirmer";
+    input5.type = "password";
 }
 
-closed.addEventListener("click", close);
+div.addEventListener("mouseup", function (event) {
+    switch (event.button) {
+        case RIGHT_BUTTON: // set the right click to "O"
+        container.remove();
+    }
+});
