@@ -48,6 +48,7 @@ div {
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
+    padding-top: 1.5rem;
 }
 
 .para {
@@ -64,4 +65,10 @@ input {
 
 input:hover {
     background-color: whitesmoke;
+}
+
+button {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
 }

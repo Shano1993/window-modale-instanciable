@@ -3,10 +3,12 @@ let container = document.getElementById('container');
 let div = document.createElement('div');
 const RIGHT_BUTTON = 2;
 
+// remove right click menu
 document.addEventListener("contextmenu", function (event){
     event.preventDefault();
 });
 
+// function to open the form
 function open() {
     form.addEventListener("click", () => {
         container.append(div);
@@ -26,29 +28,39 @@ function open() {
 
 open();
 
+// function to create the form elements
 function divElement() {
     let input1 = document.createElement('input');
     let input2 = document.createElement('input');
     let input3 = document.createElement('input');
     let input4 = document.createElement('input');
     let input5 = document.createElement('input');
+    let confirm = document.createElement('button');
     div.appendChild(input1);
     div.appendChild(input2);
     div.appendChild(input3);
     div.appendChild(input4);
     div.appendChild(input5);
-    input1.placeholder = "Votre nom";
+    div.appendChild(confirm);
+    input1.placeholder= "Votre nom";
     input2.placeholder = "Votre prénom";
     input3.placeholder = "Votre E-mail";
     input4.placeholder = "Votre mot de passe";
     input4.type = "password";
     input5.placeholder = "Confirmer";
     input5.type = "password";
+    confirm.innerHTML = "Confirmer";
+
+    confirm.addEventListener("click", function () {
+        alert("Votre profil est validé!" + " " + "Bienvenue" + " " + input1.value + " " + input2.value);
+        container.remove();
+    })
 }
 
+// right click to exit the form window
 div.addEventListener("mouseup", function (event) {
     switch (event.button) {
-        case RIGHT_BUTTON: // set the right click to "O"
+        case RIGHT_BUTTON:
         container.remove();
     }
 });
